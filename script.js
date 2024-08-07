@@ -25,7 +25,7 @@ function timer() {
 
 function makeBubbles() {
   let bubbles = "";
-  for (let i = 1; i <= 126; i++) {
+  for (let i = 1; i <= 112; i++) {
     let randNum = Math.floor(Math.random() * 10);
     bubbles += `<div class="bubble">${randNum}</div>`;
   }

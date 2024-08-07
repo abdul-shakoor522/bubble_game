@@ -1,14 +1,15 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-html, body{
+html, body {
     height: 100%;
     width: 100%;
 }
-#main{
+
+#main {
     height: 100%;
     width: 100%;
     background-color: rgb(61, 109, 61);
@@ -17,37 +18,35 @@ html, body{
     align-items: center;
 }
 
-#panel{
+#panel {
     border-radius: 10px;
     height: 80%;
-    width: 80%;
+    width: 90%; /* Changed from 80% for better responsiveness */
+    max-width: 1200px; /* Ensures a maximum width for larger screens */
     background-color: #fff;
     overflow: hidden;
 }
 
-#ptop{
+#ptop {
     height: 85px;
     width: 100%;
     display: flex;
     align-items: center;
     background-color: rgb(88, 192, 144);
-    padding: 0px 28%;
+    padding: 0px 5%; /* Changed from 28% for better responsiveness */
     justify-content: space-between;
 }
 
-.elem{
+.elem {
     display: flex;
     align-items: center;
-    
     font-size: 14px;
     font-weight: 300;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     justify-content: space-between;
-    /* padding: 0px 13%; */
-    /* background-color: aquamarine; */
 }
 
-.box{
+.box {
     font-size: 20px;
     font-weight: 700;
     color: rgb(83, 43, 122);
@@ -57,20 +56,20 @@ html, body{
     background-color: #fff;
 }
 
-#pbtm{
+#pbtm {
     width: 100%;
     height: calc(100% - 85px);
     background-color: rgba(111, 185, 61, 0.747);
-    padding: 20px 27px;
+    padding: 20px 5%; /* Changed from 27px for better responsiveness */
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    color:#fff;
+    color: #fff;
 }
 
-.bubble{
+.bubble {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -82,8 +81,61 @@ html, body{
     background-color: rgb(28, 49, 31);
 }
 
-.bubble:hover{
+.bubble:hover {
     cursor: pointer;
     background-color: rgb(54, 100, 58);
     color: #000;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    #panel {
+        width: 95%;
+    }
+    
+    #ptop {
+        padding: 0 3%;
+    }
+    
+    .box {
+        font-size: 18px;
+        padding: 12px;
+    }
+    
+    #pbtm {
+        padding: 15px 3%;
+    }
+    
+    .bubble {
+        font-size: 18px;
+        height: 50px;
+        width: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    #panel {
+        width: 100%;
+    }
+    
+    #ptop {
+        padding: 0 2%;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    
+    .box {
+        font-size: 16px;
+        padding: 10px;
+    }
+    
+    #pbtm {
+        padding: 10px 2%;
+    }
+    
+    .bubble {
+        font-size: 16px;
+        height: 40px;
+        width: 40px;
+    }
 }
